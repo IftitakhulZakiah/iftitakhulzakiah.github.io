@@ -4,7 +4,7 @@ title:  "Metodologi Information Extraction dari Berbagai Tipe Dokumen"
 date:   2017-05-29 20:47:33 +0700
 ---
 
-!/picture/1.png!
+![IE1](/picture/1.png)
 
 Information Extraction merupakan salah satu topik dari Natural Language Processing atau biasa disebut NLP yang secara otomatis mengekstraksi informasi yang tidak berstruktur / semi-struktur. Sebagai contohnya adalah memproses dokumen multimedia seperti menambahkan keterangan secara otomatis dan mengekstraksi konten dari gambar/suara/video kemudian diambil informasi penting dari media tersebut. Selain itu, information extraction juga bisa diaplikasikan pada web/aplikasi yang berbasis teks misalnya untuk menggabungkan informasi produk dari berbagai website, menjawab pertanyaan, mencari kontak infomasi, mencari artikel yang membahas tentang protein dari jurnal biomedis, maupun menghapus the noisy data.
 
@@ -45,8 +45,8 @@ Didefinisikan sebagai sebuah distribusi kondisional yang menggunakan pengamatan 
 # c.Conditional Random Fields (CRFs)
 CRFs adalah model grahic yang secara tidak langsung dilatih untuk memaksimalkan sebuah peluang kondisional.
 
-!/picture/3.png!
+![IE2](/picture/3.png)
 
 Referensi :
-[Wikipedia – Information Extraction](https://en.wikipedia.org/wiki/Information_extraction)
-[Information extraction (Tang et al)](http://keg.cs.tsinghua.edu.cn/jietang/publications/Tang-et-al-Information_Extraction.pdf) 
+* [Wikipedia – Information Extraction](https://en.wikipedia.org/wiki/Information_extraction)
+* [Information extraction (Tang et al)](http://keg.cs.tsinghua.edu.cn/jietang/publications/Tang-et-al-Information_Extraction.pdf) 
