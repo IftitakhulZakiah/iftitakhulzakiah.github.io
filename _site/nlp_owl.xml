@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has_approach -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has_approach"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has_level -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has_level"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#IE_classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#IE_classification">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#NER -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#NER">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_classification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#postag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#approach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#approach"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#association -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#association">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bag_of_words -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bag_of_words">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#vector"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#word_embedding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#question-answering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot_search_engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot_search_engine">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#search_engine"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#clustering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#clustering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#concept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#concept">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#constituent_parser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#constituent_parser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#deep_learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#deep_learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dependency_parser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dependency_parser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dialog_manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dialog_manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dialog_understanding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dialog_understanding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_classification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_translation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_translation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_translation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#graph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#graph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#hate_speech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#hate_speech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_classification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#plagiarism_detection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lemma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lemma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_translation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_translation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#matrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#matrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#negative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#negative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentimen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#netral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#netral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentimen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#normalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#normalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#paraphrase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#paraphrase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#plagiarism_detection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#plagiarism_detection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#positive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#positive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentimen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#postag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#postag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#question-answering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#question-answering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#representation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#representation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#rule_based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#rule_based">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#search_engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#search_engine">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#segmentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#segmentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#information_extraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_classification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_normalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_normalization">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has_level"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentences"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#normalization"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_normalization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_translation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentence_translation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_translation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentimen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentimen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment-analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment-analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_aspect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_aspect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment-analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_concept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_concept">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment-analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment_document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentiment-analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#shallow_learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#shallow_learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_learning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#spam_filtering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#spam_filtering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_classification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#topic_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#stemmer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#stemmer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#summarization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#summarization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#syntactical_based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#syntactical_based">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#constituent_parser"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#has"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dependency_parser"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#template_generator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#template_generator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#chatbot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#textrank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#textrank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#graph"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#level"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_classification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_normalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_normalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#normalization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_translation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_translation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#machine_translation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#topic_classification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#topic_classification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#vector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#vector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#representation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#word_embedding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#word_embedding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#vector"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#UI_di_internet_bankingnya_kurang_bagus_nih -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#UI_di_internet_bankingnya_kurang_bagus_nih">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#negative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#asas_azan_salat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#asas_azan_salat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bank_x_menyediakan_aplikasi_mobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bank_x_menyediakan_aplikasi_mobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#netral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#believe_percaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#believe_percaya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token_translation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#cnn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#cnn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#deep_learning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dnn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dnn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#deep_learning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dtree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dtree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#shallow_learning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#kuitansi_risiko_silakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#kuitansi_risiko_silakan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lstm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lstm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#deep_learning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#ngram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#ngram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#ribet_banget_ngurusin_pinjamannya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#ribet_banget_ngurusin_pinjamannya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#negative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#studies_&#45;&#45;-_studi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#studies_---_studi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#stemmer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#studies_&#45;&#45;-_study -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#studies_---_study">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lemma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#svm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#svm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#shallow_learning"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tadi_baru_ke_bank_x_nih -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tadi_baru_ke_bank_x_nih">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#netral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tf_idf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tf_idf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tried_&#45;&#45;-_tri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tried_---_tri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#stemmer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tried_&#45;&#45;-_try -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#tried_---_try">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lemma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#[0,495_0,1_0,005_0,05_0,35] -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#[0,495_0,1_0,005_0,05_0,35]">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#word_embedding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#[0_0_0_1_0] -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#[0_0_0_1_0]">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bag_of_words"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#aku;_gue;_gua;_saya;_gw -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#aku;_gue;_gua;_saya;_gw">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#paraphrase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bunganya_kecil,_cicilan_jadi_kerasa_ringan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#bunganya_kecil,_cicilan_jadi_kerasa_ringan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#positive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#mantap;_jos_banget;_keren -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#mantap;_jos_banget;_keren">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#paraphrase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#pelayanannya_bagus,_csnya_ramah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#pelayanannya_bagus,_csnya_ramah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#positive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#saya_hari_ini_sedang_makan_&#45;&#45;-(0,63)&#45;&#45;-_makan_all_you_can_eat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#saya_hari_ini_sedang_makan_---(0,63)---_makan_all_you_can_eat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#textrank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#aspect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#concept"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#document"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#sentences"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#token"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#constituent_parser"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dependency_parser"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#dictionary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#lemma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#paraphrase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#stemmer"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#graph"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#matrix"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#vector"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#negative"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#netral"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#positive"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#rule_based"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#statistical_based"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/3/rpp-ontology#syntactical_based"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
